@@ -1,0 +1,54 @@
+---
+// How it works section
+const steps = [
+  {
+    number: "1",
+    title: "Ajoutez vos abonnements",
+    description: "Entrez facilement vos abonnements avec leur nom, prix et date de renouvellement"
+  },
+  {
+    number: "2",
+    title: "Recevez des notifications",
+    description: "Soyez alerté avant chaque renouvellement pour éviter les mauvaises surprises"
+  },
+  {
+    number: "3",
+    title: "Optimisez vos dépenses",
+    description: "Analysez vos dépenses et identifiez les abonnements inutilisés"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Comment ça marche ?
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Commencez à gérer vos abonnements en 3 étapes simples
+      </p>
+    </div>
+    
+    <!-- Steps -->
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+      {steps.map((step, index) => (
+        <div class="relative text-center">
+          <!-- Step number -->
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full text-2xl font-bold mb-6 shadow-lg">
+            {step.number}
+          </div>
+          
+          {/* Connecting line (hidden on mobile, shown on desktop except for last item) */}
+          {index < steps.length - 1 && (
+            <div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-primary-200 -z-10"></div>
+          )}
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+          <p class="text-gray-600 leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

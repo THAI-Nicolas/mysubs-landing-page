@@ -1,0 +1,60 @@
+---
+// Features component
+const features = [
+  {
+    icon: "📊",
+    title: "Vue d'ensemble complète",
+    description: "Visualisez tous vos abonnements en un coup d'œil avec un tableau de bord intuitif"
+  },
+  {
+    icon: "🔔",
+    title: "Notifications intelligentes",
+    description: "Recevez des alertes avant chaque renouvellement pour ne jamais être surpris"
+  },
+  {
+    icon: "💰",
+    title: "Suivi des dépenses",
+    description: "Analysez vos dépenses mensuelles et annuelles avec des graphiques détaillés"
+  },
+  {
+    icon: "📅",
+    title: "Calendrier intégré",
+    description: "Consultez tous vos renouvellements dans un calendrier pratique"
+  },
+  {
+    icon: "🏷️",
+    title: "Catégories personnalisées",
+    description: "Organisez vos abonnements par catégorie pour une meilleure gestion"
+  },
+  {
+    icon: "🔒",
+    title: "Données sécurisées",
+    description: "Vos informations sont chiffrées et stockées en toute sécurité"
+  }
+];
+---
+
+<section id="features" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Fonctionnalités puissantes
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Tout ce dont vous avez besoin pour gérer vos abonnements efficacement
+      </p>
+    </div>
+    
+    <!-- Features grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="text-5xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+          <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
