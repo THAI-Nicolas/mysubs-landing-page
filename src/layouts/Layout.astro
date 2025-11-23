@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "MySubs - Gérez vos abonnements en toute simplicité" } = Astro.props;
+const { title, description = "MySubs - Gérez vos abonnements en toute simplicité. Suivez, organisez et optimisez vos dépenses d'abonnements." } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,10 +16,16 @@ const { title, description = "MySubs - Gérez vos abonnements en toute simplicit
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://mysubs.app" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -28,7 +34,7 @@ const { title, description = "MySubs - Gérez vos abonnements en toute simplicit
     
     <title>{title}</title>
   </head>
-  <body class="antialiased">
+  <body class="antialiased font-sans">
     <slot />
   </body>
 </html>

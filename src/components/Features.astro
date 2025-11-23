@@ -1,5 +1,5 @@
 ---
-// Features component
+// Features component - Matching Figma design
 const features = [
   {
     icon: "📊",
@@ -34,25 +34,27 @@ const features = [
 ];
 ---
 
-<section id="features" class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="features" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <!-- Section header -->
-    <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
         Fonctionnalités puissantes
       </h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
         Tout ce dont vous avez besoin pour gérer vos abonnements efficacement
       </p>
     </div>
     
     <!-- Features grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {features.map((feature) => (
-        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="text-5xl mb-4">{feature.icon}</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-          <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 lg:p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300">
+          <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-3xl">{feature.icon}</span>
+          </div>
+          <h3 class="text-lg lg:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+          <p class="text-gray-600 text-sm lg:text-base leading-relaxed">{feature.description}</p>
         </div>
       ))}
     </div>
