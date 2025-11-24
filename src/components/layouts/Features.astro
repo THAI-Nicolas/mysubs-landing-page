@@ -1,0 +1,113 @@
+---
+import Cercle from '../../assets/img/cercle.svg';
+import Btn from '../ui/Btn.astro';
+import MockUp from '../../assets/img/mock-up-solution.webp';
+import CercleEntier from '../../assets/img/cercle-entier.svg';
+import MockUpSubs from '../../assets/img/mock-up-subs.webp';
+import MockUpCalendar from '../../assets/img/mock-up-calendar.webp';
+import MockUpBudget from '../../assets/img/mock-up-budget.webp';
+---
+
+<section class="bg-secondary py-12 sm:py-16 md:py-20 overflow-hidden" id="features">
+  <!-- Section header -->
+  <div class="container mx-auto px-4 sm:px-6 md:px-8 mb-12 sm:mb-16 md:mb-20 text-center">
+    <h2 class="animate-on-scroll font-sans font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary mb-4 sm:mb-6">
+      MySubs facilite votre gestion d'abonnements
+    </h2>
+  </div>
+  
+  <div class="container mx-auto px-4 sm:px-6 md:px-8">
+    
+    <!-- Intro Features -->
+    <div class="flex flex-col lg:flex-row justify-between gap-8 md:gap-12 mb-32 md:mb-48 lg:mb-96 items-center">
+      <article class="animate-on-scroll max-w-md mb-0 lg:mb-20">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full mb-4 sm:mb-6 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+        </div>
+        <h3 class="font-sans font-semibold text-xl sm:text-2xl text-primary mb-3 sm:mb-4">Visualisez tout en un coup d'œil</h3>
+        <p class="font-sans font-medium text-base sm:text-lg text-[#353535]">
+          Gardez un œil instantané sur tous vos abonnements grâce à une vue claire et organisée.
+          Calendrier mensuel, liste détaillée, rappels : vous savez toujours ce qui vous attend.
+        </p>
+      </article>
+      
+      <figure class="animate-on-scroll relative flex justify-center items-center mt-0 lg:mt-32 w-full lg:w-auto">
+        <div class="relative w-full flex justify-center">
+          <img src={CercleEntier.src} alt="" class="hidden lg:block w-[1200px] xl:w-[2000px] absolute left-0 xl:left-8" aria-hidden="true" width="2000" height="2000" loading="lazy" />
+          <img src={MockUp.src} alt="Interface MySubs sur différents appareils montrant le tableau de bord" class="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:w-[1000px] relative z-10 h-full object-contain rounded-3xl" width="1000" height="700" loading="lazy" /> 
+        </div>
+      </figure>
+      
+      <article class="animate-on-scroll max-w-md mt-0 lg:mt-[400px]">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full mb-4 sm:mb-6 flex items-center justify-center" aria-hidden="true">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+        </div>
+        <h3 class="font-sans font-semibold text-xl sm:text-2xl text-primary mb-3 sm:mb-4">Gérez vos dépenses de A à Z</h3>
+        <p class="font-sans font-medium text-base sm:text-lg text-[#353535]">
+          MySubs calcule automatiquement combien vous dépensez par mois et par an, et vous alerte avant chaque prélèvement.
+        </p>
+      </article>
+    </div>
+
+    <!-- Feature 1: Add subscriptions -->
+    <article class="flex flex-col lg:flex-row-reverse items-center gap-8 sm:gap-12 lg:gap-16 mb-20 sm:mb-24 md:mb-32">
+      <figure class="slide-right w-full lg:w-1/2 order-2 lg:order-1 relative flex justify-center">
+        <img src={CercleEntier.src} alt="" class="hidden lg:block absolute top-1/2 left-1/2 lg:left-[300px] xl:left-[500px] transform -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none -z-10" data-speed="0.2" aria-hidden="true" width="2000" height="2000" loading="lazy" />
+        
+        <img src={MockUpSubs.src} alt="Écran d'ajout d'abonnements dans MySubs" class="xl:w-[300px] lg:w-[250px] sm:w-[200px] w-36" width="300" height="650" loading="lazy" />
+      </figure>
+      
+      <div class="slide-left w-full lg:w-1/2 order-1 lg:order-2">
+        <h3 class="font-sans font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#292929] mb-4 sm:mb-6 md:mb-8">
+          Ajoutez vos abonnements rapidement
+        </h3>
+        <p class="font-sans font-medium text-base sm:text-lg md:text-xl text-[#616161] mb-6 sm:mb-8">
+          Choisissez dans un large catalogue de plus de 120 abonnements, ou créez les vôtres en toute liberté.
+          Gagnez du temps grâce à l'ajout automatique : par email ou retracement bancaire, MySubs détecte vos dépenses récurrentes et les ajoute pour vous.
+        </p>
+        <Btn text="Voir le catalogue d'abonnements" variant="default" href="#catalog" />
+      </div>
+    </article>
+
+    <!-- Feature 2: Visualize all debits -->
+    <article class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16 mb-20 sm:mb-24 md:mb-32">
+      <figure class="slide-left w-full lg:w-1/2 order-2 lg:order-1 relative flex justify-center">
+        <img src={CercleEntier.src} alt="" class="hidden lg:block absolute top-1/2 left-1/2 lg:left-60 xl:left-80 transform -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none -z-10" data-speed="0.2" aria-hidden="true" width="2000" height="2000" loading="lazy" />
+        
+        <img src={MockUpCalendar.src} alt="Calendrier mensuel MySubs montrant les prélèvements à venir" class="xl:w-[300px] lg:w-[250px] sm:w-[200px] w-36" width="300" height="650" loading="lazy" />
+      </figure>
+      
+      <div class="slide-right w-full lg:w-1/2 order-1 lg:order-2">
+        <h3 class="font-sans font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#292929] mb-4 sm:mb-6 md:mb-8">
+          Visualisez tous vos prélèvements
+        </h3>
+        <p class="font-sans font-medium text-base sm:text-lg md:text-xl text-[#616161] mb-6 sm:mb-8">
+          Avec le calendrier intuitif de MySubs, vous voyez instantanément tous les prélèvements de votre mois.
+          Chaque abonnement apparaît au bon jour, avec son montant et sa couleur, pour vous aider à anticiper les dépenses à venir.
+          Plus besoin de fouiller dans vos emails : vous savez exactement ce qui arrive et quand.
+        </p>
+        <Btn text="Voir mes futurs prélèvements" variant="default" href="#calendar" />
+      </div>
+    </article>
+
+    <!-- Feature 3: Track expenses -->
+    <article class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16 mb-20 sm:mb-24 md:mb-32">
+      <div class="slide-left w-full lg:w-1/2">
+        <h3 class="font-sans font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#292929] mb-4 sm:mb-6 md:mb-8">
+          Suivez vos dépenses en temps réel
+        </h3>
+        <p class="font-sans font-medium text-base sm:text-lg md:text-xl text-[#616161] mb-6 sm:mb-8">
+          Obtenez des statistiques détaillées sur vos dépenses mensuelles et annuelles. Identifiez rapidement les abonnements qui pèsent le plus sur votre budget et optimisez vos dépenses en connaissance de cause.
+        </p>
+        <Btn text="Voir les statistiques" variant="default" href="#stats" />
+      </div>
+      
+      <figure class="slide-right w-full lg:w-1/2 relative flex justify-center">
+        <img src={CercleEntier.src} alt="" class="hidden lg:block absolute top-1/2 left-1/2 lg:left-[300px] xl:left-[500px] transform -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none -z-10" data-speed="0.2" aria-hidden="true" width="2000" height="2000" loading="lazy" />
+
+        <img src={MockUpBudget.src} alt="Graphiques de statistiques et budget MySubs" class="xl:w-[300px] lg:w-[250px] sm:w-[200px] w-36" width="300" height="650" loading="lazy" />
+      </figure>
+    </article>
+
+  </div>
+</section>

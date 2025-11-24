@@ -1,0 +1,43 @@
+---
+
+import Rmc from '../../assets/icons/rmc.webp';
+import Netflix from '../../assets/icons/netflix.webp';
+import Amazon from '../../assets/icons/amazon.webp';
+import Sponsors from './Sponsors.astro';
+---
+
+<section class="bg-secondary py-12 sm:py-16 md:py-20 overflow-hidden">
+  <!-- Partners / Sponsors -->
+  <Sponsors />
+
+  <!-- Problem Statement -->
+  <div class="animate-on-scroll container mx-auto px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row items-center mt-16 sm:mt-20 md:mt-24 gap-12 sm:gap-14 lg:gap-16">
+    <!-- Visual composition with subscription logos -->
+    <aside class="w-full lg:w-1/2 relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] flex items-center justify-center lg:block" aria-label="Exemples d'abonnements populaires">
+      <figure class="absolute top-0 left-1/2 -translate-x-1/2 lg:left-10 lg:translate-x-0 w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 bg-white rounded-2xl sm:rounded-3xl shadow-lg flex items-center justify-center p-6 sm:p-8 transform -rotate-6 z-10">
+        <img src={Netflix.src} alt="Logo Netflix" class="w-full h-full object-contain" width="208" height="208" loading="lazy" />
+      </figure>
+      <figure class="absolute top-24 sm:top-28 md:top-32 left-1/2 translate-x-16 lg:left-60 lg:translate-x-0 w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 bg-white rounded-2xl sm:rounded-3xl shadow-lg flex items-center justify-center p-6 sm:p-8 transform rotate-12 z-20">
+        <img src={Amazon.src} alt="Logo Amazon Prime" class="w-full h-full object-contain" width="208" height="208" loading="lazy" />
+      </figure>
+       <figure class="absolute top-48 sm:top-52 md:top-60 left-1/2 -translate-x-16 lg:left-20 lg:translate-x-0 w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 bg-white rounded-2xl sm:rounded-3xl shadow-lg flex items-center justify-center p-6 sm:p-8 transform -rotate-3 z-30">
+        <img src={Rmc.src} alt="Logo RMC Sport" class="w-full h-full object-contain" width="208" height="208" loading="lazy" />
+      </figure>
+    </aside>
+
+    <!-- Problem description -->
+    <article class="animate-on-scroll w-full lg:w-1/2">
+      <h2 class="font-sans font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black mb-6 sm:mb-8 md:mb-12 leading-tight">
+        Vous ne savez plus combien vous dépensez en abonnements ?
+      </h2>
+      <p class="font-sans text-base sm:text-lg md:text-xl text-[#3d3d3d] mb-3 sm:mb-4">
+        Entre Netflix, Spotify, votre forfait mobile et toutes vos applications, il devient facile de perdre le fil.
+      </p>
+      <p class="font-sans text-sm sm:text-base md:text-lg text-black leading-relaxed">
+        Chaque mois, des millions d'étudiants et de jeunes actifs paient des dizaines d'abonnements sans même s'en rendre compte.
+        Plateformes de streaming, box Internet, outils de productivité, services de cloud…
+        Les montants s'accumulent, et les prélèvements surprises finissent par peser lourd sur votre budget.
+      </p>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,239 @@
+---
+import CercleEntier from '../../assets/img/cercle-entier.svg';
+import Star from '../../assets/icons/star.svg';
+import Client1 from '../../assets/img/client1.webp';
+import Client2 from '../../assets/img/client2.webp';
+import Client3 from '../../assets/img/client3.webp';
+---
+
+<section class="bg-gradient-primary py-24 sm:py-32 md:py-40 lg:py-48 relative overflow-hidden text-white">
+  <div class="container mx-auto px-4 sm:px-6 md:px-8">
+    <h2 class="animate-on-scroll text-secondary font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-12 sm:mb-16 md:mb-20">
+      Ils ont testé MySubs et ne s'en passent plus
+    </h2>
+
+    <div class="animate-on-scroll relative h-[400px] sm:h-[450px] md:h-[500px] mb-32 sm:mb-40 md:mb-48 lg:mb-60">
+      <!-- Testimonials Carousel -->
+      <div class="carousel-container relative w-full h-full overflow-visible" role="region" aria-label="Témoignages clients" aria-live="polite">
+        
+        <!-- Testimonial 1 - Leo BAUDRY -->
+        <article class="testimonial-card absolute top-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out bg-white text-primary p-6 sm:p-8 rounded-md shadow-lg flex flex-col items-center text-center w-[300px] sm:w-[350px] md:w-[400px]" data-index="0">
+          <img src={Client2.src} alt="" class="absolute -top-8 sm:-top-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white object-cover" width="80" height="80" loading="lazy" />
+          <div class="mt-8 sm:mt-10 mb-3 sm:mb-4">
+            <h3 class="font-sans font-semibold text-lg sm:text-xl">Leo BAUDRY</h3>
+          </div>
+          <p class="font-sans text-base sm:text-lg text-[#404d60] mb-4 sm:mb-6">
+            Application indispensable pour les étudiants. Je recommande à 100%, ça m'a déjà évité deux prélèvements oubliés
+          </p>
+          <div class="flex gap-1" role="img" aria-label="Note de 5 étoiles sur 5">
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+          </div>
+        </article>
+
+        <!-- Testimonial 2 - Tristan JOEL (Central) -->
+        <article class="testimonial-card absolute top-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out bg-white text-primary p-8 sm:p-10 rounded-md shadow-2xl flex flex-col items-center text-center w-[350px] sm:w-[420px] md:w-[480px]" data-index="1">
+          <img src={Client3.src} alt="" class="absolute -top-10 sm:-top-12 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white object-cover" width="96" height="96" loading="lazy" />
+          <div class="mt-10 sm:mt-12 mb-3 sm:mb-4">
+            <h3 class="font-sans font-semibold text-xl sm:text-2xl">Tristan JOEL</h3>
+          </div>
+          <p class="font-sans text-lg sm:text-xl text-[#404d60] mb-4 sm:mb-6">
+            MySubs m'a sauvé : j'ai découvert 3 abonnements oubliés en une semaine. Interface simple et rappels qui marchent.
+          </p>
+          <div class="flex gap-1" role="img" aria-label="Note de 5 étoiles sur 5">
+            <img src={Star.src} alt="" class="w-6 h-6 sm:w-7 sm:h-7" width="28" height="28" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-6 h-6 sm:w-7 sm:h-7" width="28" height="28" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-6 h-6 sm:w-7 sm:h-7" width="28" height="28" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-6 h-6 sm:w-7 sm:h-7" width="28" height="28" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-6 h-6 sm:w-7 sm:h-7" width="28" height="28" aria-hidden="true" />
+          </div>
+        </article>
+
+        <!-- Testimonial 3 - Claire MORET -->
+        <article class="testimonial-card absolute top-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out bg-white text-primary p-6 sm:p-8 rounded-md shadow-lg flex flex-col items-center text-center w-[300px] sm:w-[350px] md:w-[400px]" data-index="2">
+          <img src={Client1.src} alt="" class="absolute -top-8 sm:-top-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white object-cover" width="80" height="80" loading="lazy" />
+          <div class="mt-8 sm:mt-10 mb-3 sm:mb-4">
+            <h3 class="font-sans font-semibold text-lg sm:text-xl">Claire MORET</h3>
+          </div>
+          <p class="font-sans text-base sm:text-lg text-[#404d60] mb-4 sm:mb-6">
+            J'avais totalement perdu la main sur mes abonnements. MySubs m'a permis de comprendre où partait mon argent, super clair et simple !
+          </p>
+          <div class="flex gap-1" role="img" aria-label="Note de 5 étoiles sur 5">
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+            <img src={Star.src} alt="" class="w-5 h-5 sm:w-6 sm:h-6" width="24" height="24" aria-hidden="true" />
+          </div>
+        </article>
+      </div>
+
+      <!-- Carousel Navigation -->
+      <nav class="flex justify-center gap-3 sm:gap-4 mt-6 sm:mt-8" aria-label="Navigation du carrousel de témoignages">
+        <button class="carousel-dot w-12 sm:w-16 h-1 bg-white rounded-full transition-opacity" data-slide="0" aria-label="Afficher le témoignage 1" aria-current="true"></button>
+        <button class="carousel-dot w-12 sm:w-16 h-1 bg-white rounded-full transition-opacity opacity-50" data-slide="1" aria-label="Afficher le témoignage 2"></button>
+        <button class="carousel-dot w-12 sm:w-16 h-1 bg-white rounded-full transition-opacity opacity-50" data-slide="2" aria-label="Afficher le témoignage 3"></button>
+      </nav>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-12 sm:gap-14 md:gap-20 lg:gap-32">
+      
+      <!-- Stat 1 -->
+      <article class="animate-on-scroll flex flex-col items-center relative">
+        <div class="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 flex items-center justify-center">
+           <div class="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 bg-white absolute rounded-full" aria-hidden="true"></div>
+           <span class="counter font-sans font-semibold text-4xl sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-[#2c5796] to-[#051d40] z-10" style="-webkit-text-stroke: 1px white;" data-target="+120">+120</span>
+        </div>
+        <p class="font-sans font-semibold text-lg sm:text-xl md:text-2xl text-center mt-3 sm:mt-4">Abonnements référencés</p>
+      </article>
+
+      <!-- Stat 2 -->
+      <article class="animate-on-scroll delay-100 flex flex-col items-center relative">
+        <div class="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 flex items-center justify-center">
+           <div class="rotate-slow w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 bg-white absolute rounded-full" aria-hidden="true"></div>
+           <span class="counter font-sans font-semibold text-4xl sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-[#2c5796] to-[#051d40] z-10" style="-webkit-text-stroke: 1px white;" data-target="35€">35€</span>
+        </div>
+        <p class="font-sans font-semibold text-lg sm:text-xl md:text-2xl text-center mt-3 sm:mt-4">Économisés en moyenne par mois</p>
+      </article>
+
+      <!-- Stat 3 -->
+      <article class="animate-on-scroll delay-200 flex flex-col items-center relative">
+        <div class="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 flex items-center justify-center">
+           <div class="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 bg-white absolute rounded-full" aria-hidden="true"></div>
+           <span class="counter font-sans font-semibold text-4xl sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-[#2c5796] to-[#051d40] z-10" style="-webkit-text-stroke: 1px white;" data-target="92%">92%</span>
+        </div>
+        <p class="font-sans font-semibold text-lg sm:text-xl md:text-2xl text-center mt-3 sm:mt-4">Utilisateurs satisfaits</p>
+      </article>
+
+    </div>
+
+    <!-- CTA Section -->
+    <aside class="scale-up bg-secondary rounded-xl sm:rounded-2xl px-6 sm:px-8 md:px-12 py-12 sm:py-14 md:py-16 text-center mt-20 sm:mt-24 md:mt-28 lg:mt-32" id="download">
+      <h2 class="font-sans font-bold text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-5 md:mb-6 leading-tight">
+        Reprenez le contrôle sur vos abonnements dès aujourd'hui
+      </h2>
+      <p class="font-sans font-medium text-primary text-sm sm:text-base md:text-lg mb-2 sm:mb-3 max-w-3xl mx-auto">
+        Gardez une vision claire de vos dépenses, recevez des rappels avant chaque prélèvement et arrêtez de subir votre budget.
+      </p>
+      <p class="font-sans italic text-primary text-sm sm:text-base md:text-lg mb-6 sm:mb-7 md:mb-8 max-w-3xl mx-auto">
+        MySubs, l'application gratuite qui simplifie votre gestion d'abonnements.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+        <a href="#" class="badge-pulse transition-transform hover:scale-105" rel="noopener noreferrer" target="_blank" aria-label="Télécharger MySubs sur l'App Store">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Télécharger sur l'App Store" class="h-10 sm:h-11 md:h-12" width="120" height="40" loading="lazy" />
+        </a>
+        <a href="#" class="badge-pulse transition-transform hover:scale-105" rel="noopener noreferrer" target="_blank" aria-label="Télécharger MySubs sur Google Play">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponible sur Google Play" class="h-10 sm:h-11 md:h-12" width="135" height="40" loading="lazy" />
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script>
+  function initCarousel() {
+    const cards = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      const containerWidth = document.querySelector('.carousel-container')?.clientWidth || 1200;
+      
+      cards.forEach((card, index) => {
+        const htmlCard = card as HTMLElement;
+        const relativePosition = index - currentSlide;
+        
+        // Position calculation
+        let leftPosition = containerWidth / 2;
+        let scale = 1;
+        let zIndex = 1;
+        let opacity = 1;
+        
+        if (relativePosition === 0) {
+          // Center card
+          leftPosition = containerWidth / 2;
+          scale = 1.2;
+          zIndex = 30;
+          opacity = 1;
+        } else if (relativePosition === -1 || relativePosition === 2) {
+          // Left card
+          leftPosition = containerWidth / 2 - 380;
+          scale = 0.95;
+          zIndex = 20;
+          opacity = 0.8;
+        } else if (relativePosition === 1 || relativePosition === -2) {
+          // Right card
+          leftPosition = containerWidth / 2 + 380;
+          scale = 0.95;
+          zIndex = 20;
+          opacity = 0.8;
+        } else {
+          // Hidden cards
+          opacity = 0;
+          zIndex = 10;
+        }
+        
+        htmlCard.style.left = `${leftPosition}px`;
+        htmlCard.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        htmlCard.style.zIndex = `${zIndex}`;
+        htmlCard.style.opacity = `${opacity}`;
+      });
+
+      // Update dots ARIA and styles
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.remove('opacity-50');
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.classList.add('opacity-50');
+          dot.setAttribute('aria-current', 'false');
+        }
+      });
+    }
+
+    // Dot click handlers
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const slideIndex = parseInt(dot.getAttribute('data-slide') || '0');
+        currentSlide = slideIndex;
+        updateCarousel();
+      });
+    });
+
+    // Auto-rotate carousel
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % 3;
+      updateCarousel();
+    }, 5000);
+
+    // Initial setup
+    updateCarousel();
+    
+    // Update on resize
+    window.addEventListener('resize', updateCarousel);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
+  }
+</script>
+
+<style>
+  .rotate-slow {
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

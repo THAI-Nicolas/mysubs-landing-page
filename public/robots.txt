@@ -1,0 +1,12 @@
+# robots.txt for MySubs Landing Page
+# https://mysubs.app/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block admin and private directories (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://mysubs.app/sitemap.xml

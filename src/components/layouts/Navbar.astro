@@ -1,0 +1,215 @@
+---
+import Logo from '../../assets/icons/logo.svg';
+import Btn from '../ui/Btn.astro';
+---
+
+<!-- Desktop Navigation -->
+<nav 
+  id="navbar-desktop" 
+  class="hidden lg:flex fixed top-0 left-0 w-full z-50 px-12 lg:px-24 xl:px-32 py-5 items-center justify-between transition-all duration-300"
+  aria-label="Navigation principale"
+>
+  <a href="/" class="font-sans font-bold text-4xl text-primary flex items-center gap-2" aria-label="MySubs - Retour à l'accueil">
+    <img src={Logo.src} alt="Logo MySubs" class="w-28" width="112" height="40" loading="eager" />
+  </a>
+  
+  <ul class="flex items-center gap-6 xl:gap-16">
+    <li>
+      <a href="#features" class="font-semibold text-base xl:text-lg text-secondary hover:text-primary-light transition-colors">
+        Fonctionnalités
+      </a>
+    </li>
+    <li>
+      <a href="#about" class="font-urbanist font-semibold text-base xl:text-lg text-secondary hover:text-primary-light transition-colors">
+        À Propos
+      </a>
+    </li>
+    <li>
+      <a href="#pricing" class="font-urbanist font-semibold text-base xl:text-lg text-secondary hover:text-primary-light transition-colors">
+        Tarifs
+      </a>
+    </li>
+    <li>
+      <Btn href="#login" variant="default" text='Se connecter' />
+    </li>
+  </ul>
+</nav>
+
+<!-- Mobile/Tablet Navigation (closed state) -->
+<nav 
+  id="navbar-mobile" 
+  class="lg:hidden fixed top-0 left-0 w-full z-50 px-4 py-6 sm:px-6 sm:py-5 flex items-center justify-between transition-all duration-300"
+  aria-label="Navigation principale mobile"
+>
+  <a href="/" class="font-sans font-bold text-2xl sm:text-3xl text-primary flex items-center gap-2" aria-label="MySubs - Retour à l'accueil">
+    <img src={Logo.src} alt="Logo MySubs" class="w-20 sm:w-24" width="96" height="34" loading="eager" />
+  </a>
+  
+  <button 
+    id="mobile-menu-button" 
+    class="text-secondary transition-colors duration-300" 
+    aria-label="Ouvrir le menu de navigation"
+    aria-expanded="false"
+    aria-controls="navbar-mobile-open"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </button>
+</nav>
+
+<!-- Mobile/Tablet Navigation (open state - full screen) -->
+<nav 
+  id="navbar-mobile-open" 
+  class="lg:hidden fixed top-0 left-0 w-screen h-screen bg-secondary z-[60] transform translate-x-full transition-transform duration-300"
+  aria-label="Menu de navigation mobile"
+  aria-hidden="true"
+>
+  <div class="px-4 py-4 sm:px-6 sm:py-5 mt-4 flex items-center justify-between">
+    <a href="/" class="font-sans font-bold text-2xl sm:text-3xl text-primary flex items-center gap-2" aria-label="MySubs - Retour à l'accueil">
+      <img src={Logo.src} alt="Logo MySubs" class="w-20 sm:w-24" width="96" height="34" loading="eager" />
+    </a>
+    
+    <button 
+      id="mobile-menu-close" 
+      class="text-primary" 
+      aria-label="Fermer le menu de navigation"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  
+  <ul class="flex flex-col items-center justify-center h-[calc(100%-80px)] w-full gap-8 px-6">
+    <li>
+      <a href="#features" class="mobile-menu-link font-semibold text-2xl text-primary hover:text-primary-light transition-colors">
+        Fonctionnalités
+      </a>
+    </li>
+    <li>
+      <a href="#about" class="mobile-menu-link font-urbanist font-semibold text-2xl text-primary hover:text-primary-light transition-colors">
+        À Propos
+      </a>
+    </li>
+    <li>
+      <a href="#pricing" class="mobile-menu-link font-urbanist font-semibold text-2xl text-primary hover:text-primary-light transition-colors">
+        Tarifs
+      </a>
+    </li>
+    <li class="mt-4">
+      <Btn href="#login" variant="default" text='Se connecter' />
+    </li>
+  </ul>
+</nav>
+
+<script>
+  function initNavbar() {
+    const navbarDesktop = document.getElementById('navbar-desktop');
+    const navbarMobile = document.getElementById('navbar-mobile');
+    const navbarMobileOpen = document.getElementById('navbar-mobile-open');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const menuCloseButton = document.getElementById('mobile-menu-close');
+    const menuLinks = document.querySelectorAll('.mobile-menu-link');
+    const body = document.body;
+    const html = document.documentElement;
+
+    // Desktop navbar scroll handling
+    function handleScrollDesktop() {
+      if (!navbarDesktop) return;
+      
+      const navLinks = navbarDesktop.querySelectorAll('a:not(.btn-animated)');
+      
+      if (window.scrollY > 50) {
+        navbarDesktop.classList.add('bg-secondary/90', 'backdrop-blur-sm', 'shadow-md');
+        // Change link colors to primary (dark blue)
+        navLinks.forEach(link => {
+          link.classList.remove('text-secondary');
+          link.classList.add('text-primary');
+        });
+      } else {
+        navbarDesktop.classList.remove('bg-secondary/90', 'backdrop-blur-sm', 'shadow-md');
+        // Restore original link colors to secondary
+        navLinks.forEach(link => {
+          link.classList.remove('text-primary');
+          link.classList.add('text-secondary');
+        });
+      }
+    }
+
+    // Mobile navbar scroll handling
+    function handleScrollMobile() {
+      if (!navbarMobile || !menuButton) return;
+      
+      // Don't apply styles if menu is open
+      if (navbarMobileOpen && !navbarMobileOpen.classList.contains('translate-x-full')) {
+        return;
+      }
+      
+      if (window.scrollY > 50) {
+        navbarMobile.classList.add('bg-secondary/90', 'backdrop-blur-sm', 'shadow-md');
+        menuButton.classList.remove('text-secondary');
+        menuButton.classList.add('text-primary');
+      } else {
+        navbarMobile.classList.remove('bg-secondary/90', 'backdrop-blur-sm', 'shadow-md');
+        menuButton.classList.remove('text-primary');
+        menuButton.classList.add('text-secondary');
+      }
+    }
+
+    function handleScroll() {
+      handleScrollDesktop();
+      handleScrollMobile();
+    }
+
+    // Open mobile menu
+    if (menuButton && navbarMobileOpen) {
+      menuButton.addEventListener('click', () => {
+        navbarMobileOpen.classList.remove('translate-x-full');
+        navbarMobileOpen.setAttribute('aria-hidden', 'false');
+        menuButton.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+        html.style.overflow = 'hidden';
+        body.style.position = 'fixed';
+        body.style.width = '100%';
+      });
+    }
+
+    // Close mobile menu
+    function closeMenu() {
+      if (!navbarMobileOpen || !menuButton) return;
+      
+      navbarMobileOpen.classList.add('translate-x-full');
+      navbarMobileOpen.setAttribute('aria-hidden', 'true');
+      menuButton.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+      html.style.overflow = '';
+      body.style.position = '';
+      body.style.width = '';
+      
+      // Reapply navbar styles based on scroll position
+      setTimeout(handleScrollMobile, 50);
+    }
+
+    if (menuCloseButton) {
+      menuCloseButton.addEventListener('click', closeMenu);
+    }
+
+    // Close menu when clicking on links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Initialize navbar state
+    handleScroll();
+    
+    // Listen to scroll events
+    window.addEventListener('scroll', handleScroll);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+  } else {
+    initNavbar();
+  }
+</script>

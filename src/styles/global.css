@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens from Figma */
+:root {
+  /* Primary Colors */
+  --color-primary-dark: #051d40; /* Primary Dark Blue */
+  --color-primary-light: #2c5796; /* Light Blue (gradient end) */
+
+  /* Text Colors */
+  --color-text-dark: #051d40; /* Primary text */
+  --color-text-light: #404d60; /* Light Dark Blue */
+  --color-text-body: #353535; /* Body text */
+  --color-text-secondary: #616161; /* Secondary text */
+  --color-text-tertiary: #3d3d3d; /* Tertiary text */
+
+  /* Accent Colors */
+  --color-accent-blue: #b1d4e0; /* Clear Blue */
+  --color-secondary: #fafafa; /* Secondary White */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(to bottom, #051d40, #2c5796);
+  --gradient-button: linear-gradient(to right, #2c5796, #051d40);
+}
+
+@layer base {
+  * {
+    font-family: "Urbanist", sans-serif;
+  }
+
+  html,
+  body {
+    font-family: "Urbanist", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: #051d40;
+  }
+  
+  /* Accessibility: Skip link styles */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  
+  /* Accessibility: Focus visible styles */
+  *:focus-visible {
+    outline: 3px solid #2c5796;
+    outline-offset: 2px;
+  }
+  
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #2c5796;
+    outline-offset: 2px;
+  }
+}

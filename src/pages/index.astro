@@ -1,20 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
-import HowItWorks from '../components/HowItWorks.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CTA from '../components/CTA.astro';
-import Footer from '../components/Footer.astro';
+import Hero from  '../components/layouts/Hero.astro';
+import ProblemSolved from '../components/layouts/ProblemSolved.astro';
+import Features from '../components/layouts/Features.astro';
+import Testimonials from '../components/layouts/Testimonials.astro';
+import Footer from '../components/layouts/Footer.astro';
+
+const title = "MySubs - Gestionnaire d'abonnements intelligent";
+const description = "Gérez vos abonnements en toute simplicité avec MySubs. Suivez, organisez et optimisez vos dépenses mensuelles. Alertes avant prélèvement, statistiques détaillées et catalogue de +120 services.";
+const canonicalUrl = "https://mysubs.app";
 ---
 
-<Layout title="MySubs - Gestionnaire d'abonnements">
-  <main>
-    <Hero />
+<Layout 
+  title={title} 
+  description={description}
+  canonicalUrl={canonicalUrl}
+>
+  <Hero />
+  <main id="main-content">
+    <ProblemSolved />
     <Features />
-    <HowItWorks />
     <Testimonials />
-    <CTA />
-    <Footer />
   </main>
+  <Footer />
 </Layout>

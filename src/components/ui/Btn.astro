@@ -1,0 +1,23 @@
+---
+export interface Props {
+  variant?: 'default' | 'outline';
+  href?: string;
+  text: string;
+  class?: string;
+}
+
+const { variant = 'default', href = '#', text, class: className = '' } = Astro.props;
+
+const baseClasses = 'btn-animated font-semibold text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 text-center inline-block w-full sm:w-auto';
+
+const variantClasses = {
+  default: 'bg-gradient-button text-white shadow-lg hover:shadow-xl hover:opacity-90 ',
+  outline: 'bg-transparent border-2 border-primary text-primary hover:bg-gradient-primary hover:text-white'
+};
+
+const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
+---
+
+<a href={href} class={buttonClasses}>
+  {text}
+</a>
