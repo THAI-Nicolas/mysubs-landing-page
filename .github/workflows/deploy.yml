@@ -26,11 +26,10 @@ jobs:
       - name: 📂 Deploy to VPS
         # On utilise une version tagguée pour la stabilité
         uses: easingthemes/ssh-deploy@v5.0.3
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           SOURCE: "dist/"
           TARGET: "/var/www/mysubs-landingpage/"
-          # On garde -i si tu veux débugger, sinon "-rlgoDvc --delete" suffit
           ARGS: "-rlgoDvc --delete"
