@@ -1,0 +1,36 @@
+name: Deploy Landing Page
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: 📦 Install dependencies (strict)
+        run: npm ci # Utilise le lockfile pour une installation propre
+
+      - name: 🚀 Build Astro site
+        run: npm run build
+
+      - name: 📂 Deploy to VPS
+        # On utilise une version tagguée pour la stabilité
+        uses: easedev/ssh-deploy@v1.6.0
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          SOURCE: "dist/"
+          TARGET: "/var/www/mysubs-landingpage/"
+          # On garde -i si tu veux débugger, sinon "-rlgoDvc --delete" suffit
+          ARGS: "-rlgoDvc --delete"
